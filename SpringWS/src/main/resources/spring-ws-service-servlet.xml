@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- Endpoint definition -->
+	<bean id="stringReversalService"></bean>
+
+	<bean id="stringReversalServiceEndpoint">
+		<property name="stringReversalService" ref="stringReversalService" />
+	</bean>
+<!-- Endpoint mapping definition -->
+	<bean id="payloadMapping">
+		<property name="defaultEndpoint" ref="stringReversalServiceEndpoint" />
+	</bean>
+
+<!-- WSDL Definition -->
+	<bean id="stringReversalSchema">
+		<property name="xsd" value="/WEB-INF/reversalService.xsd" />
+	</bean>
+	<bean id="stringReversal">
+		<property name="schema" ref="stringReversalSchema" />
+		<property name="portTypeName" value="stringReversal" />
+		<property name="locationUri"
+			value="http://localhost:8080/string-reversal/services" />
+	</bean>
+
+</beans>
