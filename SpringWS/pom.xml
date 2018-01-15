@@ -6,4 +6,31 @@
   <packaging>war</packaging>
   <name>SpringWS</name>
   <description>Sample webservice project based on Spring Webservice</description>
+  
+   
+  <build>
+  	<plugins>
+  		<plugin>
+  		 	<groupId>org.apache.maven.plugins</groupId>
+  		 	<artifactId>maven-compiler-plugin</artifactId>
+  		 	<version>3.2</version>
+  		 	<configuration>
+  		 		<source>1.8</source>
+  		 		<target>1.8</target>
+  		 	</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>5.0.2.RELEASE</version>
+  	</dependency>
+  	
+  	
+  	
+  	
+  </dependencies>
 </project>
