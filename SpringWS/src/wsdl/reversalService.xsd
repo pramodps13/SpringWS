@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="qualified"
+	targetNamespace="https://javabeat.net/spring/spring-ws/articles/reversal-service"
+	xmlns:tns="https://javabeat.net/spring/spring-ws/articles/reversal-service">
+	
+	<element name="stringReveralRequest" type="string" />
+	<element name="stringReveralResponse" type="string" />
+</schema>
